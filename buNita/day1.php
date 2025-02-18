@@ -6,7 +6,7 @@
     <title>day 1</title>
     <style>
         body{
-            height: 100vh;
+            height: 100vh   ;
             width: 100%;
             color: #fff;
             background-color: #000;
