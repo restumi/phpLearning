@@ -16,18 +16,31 @@ trait hitungTrait {
         $hasil = $a - $b;
         return "$a - $b = $hasil";
     }
+    public function kali($a, $b){
+        $hasil = $a * $b;
+        return "$a x $b = $hasil";
+    }
+    public function bagi($a, $b){
+        if($b == 0){
+            return "tidak bisa membagi dengan 0";
+        }
+        $hasil = $a / $b;
+        return "$a : $b = $hasil";
+    }
 }
 
 class kalkulator {
     use hitungTrait;
 }
 
-class mtk {
+class matematika {
     use hitungTrait;
 }
 
 $kalkulator = new kalkulator();
-$mtk = new mtk();
+$mtk = new matematika();
 
 echo $kalkulator->tambah(3,5) . "\n";
-echo $kalkulator->kurang(7,5);
+echo $mtk->kurang(7,5) . "\n";
+echo $kalkulator->kali(4,5) . "\n";
+echo $mtk->bagi(3,0);
